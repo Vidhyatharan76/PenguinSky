@@ -59,6 +59,30 @@ export default function RenderBg() {
         ctx.fill();
       });
 
+  ctx.fillStyle = '#090d16';
+  ctx.beginPath();
+  ctx.moveTo(0, height);
+  ctx.lineTo(0, height - 160);
+  ctx.lineTo(width * 0.35, height - 280);
+  ctx.lineTo(width * 0.55, height - 190);
+  ctx.lineTo(width * 0.8, height - 240);
+  ctx.lineTo(width, height - 150);
+  ctx.lineTo(width, height);
+  ctx.closePath();
+  ctx.shadowBlur = 0;
+  ctx.fill();
+
+  ctx.fillStyle = '#020617';
+  ctx.beginPath();
+  ctx.moveTo(0, height);
+  ctx.lineTo(0, height - 90);
+  ctx.quadraticCurveTo(width * 0.3, height - 140, width * 0.65, height - 80);
+  ctx.quadraticCurveTo(width * 0.85, height - 50, width, height - 100);
+  ctx.lineTo(width, height);
+  ctx.closePath();
+  ctx.shadowBlur = 0;
+  ctx.fill();
+
       animationFrameId = requestAnimationFrame(render);
     };
 
