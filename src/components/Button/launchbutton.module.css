@@ -14,3 +14,33 @@
 button:active{
  transform: scale(1.05);
 }
+
+.popup{
+    height: 100dvh;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+    background-color: rgba(15, 23, 42, 0.75);
+}
+
+
+.form{
+    padding: 1.5rem;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background-color: rgba(15, 23, 42, 0.85);
+}
+
+.form h1{
+ text-align: center;
+ font-size: 1.5rem;
+}
+
