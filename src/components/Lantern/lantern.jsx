@@ -14,7 +14,7 @@ export default function LauchLantern({ message, author, color, startX,createdAt 
       initial={{ y: initialY, opacity: 0 }}          
       animate={{ 
         y: "-110vh", 
-        x: [0, 20, -20, 15, 0], 
+        x: [0, 15, -10, 10, 0], 
         opacity: [0, 1, 1, 0] 
       }}
       transition={{ 

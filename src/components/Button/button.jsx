@@ -6,9 +6,10 @@ import { toast } from 'sonner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWandMagicSparkles,faXmark } from '@fortawesome/free-solid-svg-icons';
 import LauchLantern from "../Lantern/lantern.jsx"
+import {Filter} from 'bad-words';
 
 export default function Button(){
-
+       const filter = new Filter();
 	const getStableRandom = (id, min, max) => {
 		let hash = 0;
 		for (let i = 0; i < id.length; i++) {
@@ -39,9 +40,8 @@ export default function Button(){
 
 	const launch = () =>{
 		setPopup(false)
-
-		if(formData.message){
-
+             
+		if(formData.message && !filter.isProfane(formData.message)){
 
 			const lantern = {
 				message:formData.message,
@@ -60,7 +60,7 @@ export default function Button(){
 			toast.success('Your lantern has soared into the night sky! 🏮');
 		}
 		else{
-			toast.error("The message field is required");
+			toast.error("Please provide a message without inappropriate language");
 		}
 
 	}
