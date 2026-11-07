@@ -80,6 +80,12 @@ input:focus, textarea:focus {
     border: none;
 }
 
+.btnDiv button.activeColor {
+  transform: scale(1.2);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
 button[type ="submit"]{
     background: linear-gradient(135deg, #ff9f43 0%, #ff7675 100%);
     padding: 1rem;
